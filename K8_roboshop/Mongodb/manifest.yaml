@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongodb:latest
+          image: mongodb:v1
