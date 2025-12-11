@@ -14,12 +14,14 @@ spec:
       project: roboshop
       component: mongodb
       tier: db
+
     template:
-      labels:
-        project: roboshop
-        component: mongodb
-        tier: db
-    spec:
-      containers:
-        - name: mongodb
-          image: mongodb:latest
+      metadata:
+        labels:
+          project: roboshop
+          component: mongodb
+          tier: db
+      spec:
+        containers:
+          - name: mongodb
+            image: mongodb:latest
