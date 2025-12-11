@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: krishnamsettyrohith/mongodb
+          image: joindevops/mongodb:v1
