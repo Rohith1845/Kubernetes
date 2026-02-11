@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: catalouge
+  name: catalogue
   namespace: roboshop
 data:
   MONGO: "true"
@@ -10,34 +10,34 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalouge
+  name: catalogue
   namespace: roboshop
   labels:
     project: roboshop
-    component: catalouge
+    component: catalogue
     tier: backend
 spec:
   replicas: 1
   selector: 
     matchLabels:
       project: roboshop
-      component: catalouge
+      component: catalogue
       tier: backend
 
   template:
     metadata:
       labels:
         project: roboshop
-        component: catalouge
+        component: catalogue
         tier: backend
     spec:
       containers:
-        - name: catalouge
-          image: krishnamsettyrohith/catalouge:v1
+        - name: catalogue
+          image: krishnamsettyrohith/catalogue:v1
           imagePullPolicy: Always
           envFrom:
           - configMapRef:
-              name: catalouge
+              name: catalogue
           ports:
             - name: liveness-port
               containerPort: 8080
@@ -57,12 +57,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalouge
+  name: catalogue
   namespace: roboshop
 spec:
   selector:
     project: roboshop
-    component: catalouge
+    component: catalogue
     tier: backend
   ports:
     - protocol: TCP
