@@ -32,8 +32,8 @@ by default k8 service creates classic load balancer in AWS. it is legacy, AWS al
 
 we got application load balancer, it is intelligent. it can read the request and send to appropriate target groups
 
-cart.daws86s.fun -> cart target group
-catalogue.daws86s.fun -> catalogue target group
+cart.rohithk.space -> cart target group
+catalogue.rohithk.space -> catalogue target group
 m.facebook.com -> mobile version of facebook
 
 ALB -> Listener -> Rule -> TG -> VMs

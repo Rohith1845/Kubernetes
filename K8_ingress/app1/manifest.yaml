@@ -56,7 +56,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: roboshop #group for load balancing to get same response from same lb
 spec:
   rules:
-    - host: "app1.daws86s.fun"
+    - host: "app1.rohithk.space"
       http:
         paths:
         - pathType: Prefix
